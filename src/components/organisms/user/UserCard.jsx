@@ -1,26 +1,24 @@
 import styled from "styled-components";
+import { Card } from "../../atoms/card/Card";
 
-export const UserCard = () => {
+export const UserCard = (props) => {
+  const { user } = props;
+  console.log(user);
   return (
-    <div>
-      <img
-        height={160}
-        width={160}
-        src="https://source.unsplash.com/NE0XGVKTmcA"
-        alt="プロフィール"
-      />
-      <p>名前</p>
+    <Card>
+      <img height={160} width={160} src={user.imag} alt="プロフィール" />
+      <p>{user.name}</p>
       <SDl>
         <dt>メール</dt>
-        <dd>1111@aaa.com</dd>
+        <dd>{user.mail}</dd>
         <dt>TEL</dt>
-        <dd>000-9999-88888</dd>
+        <dd>{user.TEL}</dd>
         <dt>会社名</dt>
-        <dd>シーエスアイ</dd>
+        <dd>{user.company.name}</dd>
         <dt>WEB</dt>
-        <dd>csi.com</dd>
+        <dd>{user.website}</dd>
       </SDl>
-    </div>
+    </Card>
   );
 };
 
