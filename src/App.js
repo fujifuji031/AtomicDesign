@@ -7,7 +7,7 @@ import "./styles.css";
 
 const user = {
   name: "藤田",
-  imag: "https://source.unsplash.com/NE0XGVKTmcA",
+  image: "https://source.unsplash.com/NE0XGVKTmcA",
   mail: "s-fujita.csiinc.co.jp",
   TEL: "080-1111-4444",
   company: {
