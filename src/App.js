@@ -5,13 +5,16 @@ import { SearchInput } from "./components/molecules/SearcnInput";
 import { UserCard } from "./components/organisms/user/UserCard";
 import { DefaultLayout } from "./components/templetes/DefaultLayout";
 import { HeaderOnly } from "./components/templetes/HeaderOnly";
-import { Router } from "./components/router/Router";
+import { UserProvider } from "./providers/UserProvider";
+import { Router } from "./router/Router";
 
 import "./styles.css";
 
 export default function App() {
   return (
-    <Router />
+    <UserProvider>
+      <Router />
+    </UserProvider>
     // <BrowserRouter>
     //   <DefaultLayout>
     //     <PrimaryButton>テスト</PrimaryButton>

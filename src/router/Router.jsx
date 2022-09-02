@@ -1,8 +1,8 @@
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import { Top } from "../pages/Top";
-import { Users } from "../pages/Users";
-import { DefaultLayout } from "../templetes/DefaultLayout";
-import { HeaderOnly } from "../templetes/HeaderOnly";
+import { Top } from "../components/pages/Top";
+import { Users } from "../components/pages/Users";
+import { DefaultLayout } from "../components/templetes/DefaultLayout";
+import { HeaderOnly } from "../components/templetes/HeaderOnly";
 
 export const Router = () => {
   return (
