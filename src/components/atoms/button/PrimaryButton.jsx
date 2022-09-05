@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { BaseButton } from "./BaseButton";
 
 export const PrimaryButton = (props) => {
+  console.log("PrimaryButton");
   const { children } = props;
   return <SButton>{children}</SButton>;
 };

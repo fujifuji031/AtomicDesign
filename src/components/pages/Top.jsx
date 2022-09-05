@@ -1,10 +1,22 @@
 import styled from "styled-components";
+import { useHistory } from "react-router-dom";
 import { SecondaryButton } from "../atoms/button/SecondaryButton";
+import { useContext } from "react";
+import { UserConstext } from "../../providers/UserProvider";
 
 export const Top = () => {
-  const onClickAdmin = () => alert("管理");
-  const onClickGeneral = () => alert("一般");
+  const history = useHistory();
+  const { setUserInfo } = useContext(UserConstext);
 
+  const onClickAdmin = () => {
+    setUserInfo({ isAdmin: true });
+    history.push({ pathname: "/users" });
+  };
+
+  const onClickGeneral = () => {
+    setUserInfo({ isAdmin: false });
+    history.push({ pathname: "/users" });
+  };
   return (
     <SContainer>
       <h2>TOPページです</h2>
